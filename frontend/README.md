@@ -1,18 +1,78 @@
-# React + Vite
+# 🛒 Simple Shopping Cart (Full Stack)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A minimal full-stack **Shopping Cart Application** built with  
+- **Backend:** Node.js + Express  
+- **Frontend:** React (Vite)  
+- **Styling:** Custom CSS  
 
-Currently, two official plugins are available:
+Users can browse products, add them to a cart, update quantities, and simulate a checkout.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Features
+- View product list (fetched from backend API)
+- Add items to cart
+- Increase / decrease item quantity
+- View total price
+- Checkout (sends cart data to backend)
+- Responsive design
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
+## 📂 Project Structure
+shopping-cart/
+│── backend/ # Express server
+│ └── server.js
+│
+│── frontend/ # React + Vite app
+│ ├── src/
+│ │ ├── App.jsx
+│ │ └── index.css
+│ └── vite.config.js
+│
+└── README.md
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ⚙️ Setup Instructions
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/your-username/shopping-cart.git
+cd shopping-cart
+2️⃣ Backend Setup (Node.js + Express)
+bash
+Copy code
+cd backend
+npm init -y
+npm install express cors
+Create server.js (already provided in repo).
+
+Run backend:
+
+bash
+Copy code
+node server.js
+👉 Backend runs at http://localhost:5000
+
+3️⃣ Frontend Setup (React + Vite)
+bash
+Copy code
+cd ../frontend
+npm create vite@latest .   # Choose "JavaScript + React Compiler"
+npm install
+npm install axios
+Run frontend:
+
+bash
+Copy code
+npm run dev
+👉 Frontend runs at http://localhost:5173
+
+🧪 API Endpoints
+GET /products → Fetch product list
+
+POST /checkout → Send cart data (returns success message)
+
+##📸 Screenshots
