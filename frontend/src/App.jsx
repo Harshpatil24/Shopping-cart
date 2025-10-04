@@ -1,42 +1,3 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-// import './App.css'
-
-// function App() {
-//   const [count, setCount] = useState(0)
-
-//   return (
-//     <>
-//       <div>
-//         <a href="https://vite.dev" target="_blank">
-//           <img src={viteLogo} className="logo" alt="Vite logo" />
-//         </a>
-//         <a href="https://react.dev" target="_blank">
-//           <img src={reactLogo} className="logo react" alt="React logo" />
-//         </a>
-//       </div>
-//       <h1>Vite + React</h1>
-//       <div className="card">
-//         <button onClick={() => setCount((count) => count + 1)}>
-//           count is {count}
-//         </button>
-//         <p>
-//           Edit <code>src/App.jsx</code> and save to test HMR
-//         </p>
-//       </div>
-//       <p className="read-the-docs">
-//         Click on the Vite and React logos to learn more
-//       </p>
-//     </>
-//   )
-// }
-
-// export default App
-
-
-
-
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -88,15 +49,7 @@ function App() {
       </button>
 
       {!showCart ? (
-        // <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
-        //   {products.map(p => (
-        //     <div key={p.id} style={{ border: "1px solid #ccc", padding: "10px", borderRadius: "8px", width: "200px" }}>
-        //       <img src={p.imageUrl} alt={p.name} style={{ width: "100%", height: "120px", objectFit: "cover" }} />
-        //       <h3>{p.name}</h3>
-        //       <p>₹{p.price}</p>
-        //       <button onClick={() => addToCart(p)}>Add to Cart</button>
-        //     </div>
-
+        
           <div className="products">
           {products.map(p => (
           <div key={p.id} className="product">
@@ -108,23 +61,7 @@ function App() {
         ))}
         </div>
       ) : (
-        // <div style={{ marginTop: "20px" }}>
-        //   <h2>Your Cart</h2>
-        //   {cart.map(item => (
-        //     <div key={item.id} style={{ display: "flex", justifyContent: "space-between", marginBottom: "10px" }}>
-        //       <span>{item.name} (₹{item.price})</span>
-        //       <div>
-        //         <button onClick={() => updateQty(item.id, -1)}>-</button>
-        //         <span style={{ margin: "0 10px" }}>{item.qty}</span>
-        //         <button onClick={() => updateQty(item.id, 1)}>+</button>
-        //       </div>
-        //       <span>₹{item.price * item.qty}</span>
-        //     </div>
-        //   ))}
-        //   <h3>Total: ₹{total}</h3>
-        //   <button onClick={checkout} disabled={cart.length === 0}>Checkout</button>
-        // </div>
-
+       
           <div className="cart">
         <h2>Your Cart</h2>
         {cart.map(item => (
